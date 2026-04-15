@@ -1,0 +1,315 @@
+{
+  "designSystem": {
+    "name": "Vânia Mello — Nutricionista Clínica LP",
+    "version": "1.0",
+    "description": "Design system for a warm, professional, nature-inspired landing page for a clinical nutritionist. The aesthetic is organic-elegant: soft sage greens, warm earth tones, rounded shapes, and a mix of serif display + clean sans-serif body typography. The overall feel is calming, trustworthy, and premium — like walking into a well-designed wellness clinic.",
+
+    "designPrinciples": [
+      "ORGANIC WARMTH: Every element should feel natural and inviting — rounded corners, soft shadows, muted botanical palette. No sharp edges, no cold blues, no corporate rigidity.",
+      "BREATHABLE LAYOUT: Generous vertical padding between sections (80–120px). Content never feels cramped. White space is a feature, not a gap.",
+      "ALTERNATING RHYTHM: Sections alternate between white (#FFFFFF) and soft sage-green (#F4F7F0 / #EDF2E6) backgrounds, creating a gentle visual rhythm that keeps the eye moving down the page.",
+      "SERIF FOR SOUL, SANS FOR CLARITY: Display headings use a refined serif font (Playfair Display or Lora) to convey warmth and expertise. Body text and UI elements use a clean sans-serif (DM Sans, Nunito, or Poppins) for readability.",
+      "ITALIC EMPHASIS: Key words in headings are styled in italic serif to create a handwritten, personal feel — as if the nutritionist is speaking directly to you.",
+      "GREEN = TRUST + HEALTH: The dark sage green (#3D5A3E / #4A6741) is the anchor color — used for buttons, headings, accents, and section backgrounds. It communicates health, nature, and calm authority.",
+      "SUBTLE DECORATIVE ELEMENTS: Large, faint cursive letters or botanical line art in the background of hero and CTA sections add visual richness without competing with content.",
+      "PROGRESSIVE DISCLOSURE: The page flows from promise → proof of expertise → process → social proof → personal story → location → FAQ → final CTA. Each section answers the next logical question."
+    ],
+
+    "colors": {
+      "primary": {
+        "darkGreen": "#3D5A3E",
+        "description": "Main brand color. Used for primary buttons, section headings, accent lines, and the dark-background sections (testimonials, final CTA). Deep sage green that feels natural, not clinical."
+      },
+      "secondary": {
+        "lightSage": "#F4F7F0",
+        "description": "Alternating section background color. Very soft sage/mint — barely tinted. Creates warmth without being distracting."
+      },
+      "tertiary": {
+        "mediumSage": "#EDF2E6",
+        "description": "Used for card backgrounds, FAQ accordion items, and hover states. Slightly more saturated than lightSage."
+      },
+      "accent": {
+        "softGreen": "#7A9E7E",
+        "description": "Mid-tone green for icons, decorative elements, step indicators, and secondary UI elements."
+      },
+      "decorative": {
+        "paleOlive": "#C5D4B3",
+        "description": "For subtle background decorative strokes, watermark-style cursive letters in the hero, and the scrolling marquee bar."
+      },
+      "text": {
+        "heading": "#2C3E2D",
+        "body": "#4A5548",
+        "muted": "#7A8B7C",
+        "white": "#FFFFFF",
+        "description": "Headings are near-black green-tinted. Body text is dark olive. Muted text for captions and secondary info."
+      },
+      "ui": {
+        "cardBackground": "#FFFFFF",
+        "cardBorder": "rgba(61, 90, 62, 0.08)",
+        "starGold": "#D4A843",
+        "divider": "rgba(61, 90, 62, 0.12)",
+        "shadow": "rgba(61, 90, 62, 0.06)"
+      },
+      "backgrounds": {
+        "hero": "#F4F7F0",
+        "process": "#FFFFFF",
+        "about": "#FFFFFF",
+        "testimonials": "#3D5A3E",
+        "location": "#FFFFFF",
+        "faq": "#FFFFFF",
+        "finalCTA": "#3D5A3E",
+        "footer": "#2C3E2D",
+        "specialties": "#F4F7F0"
+      }
+    },
+
+    "typography": {
+      "headingFont": {
+        "family": "'Playfair Display', 'Lora', Georgia, serif",
+        "weights": ["400", "500", "600", "700"],
+        "style": "Use italic for emphasis keywords within headings. Example: 'Como será o nosso <em>processo</em>?' — the word 'processo' is italic serif.",
+        "googleFontsImport": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      },
+      "bodyFont": {
+        "family": "'DM Sans', 'Nunito', 'Poppins', sans-serif",
+        "weights": ["300", "400", "500", "600", "700"],
+        "googleFontsImport": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+      },
+      "scale": {
+        "heroTitle": { "size": "42–52px", "weight": "700", "lineHeight": "1.15", "font": "heading", "letterSpacing": "-0.02em" },
+        "sectionTitle": { "size": "32–40px", "weight": "600", "lineHeight": "1.2", "font": "heading" },
+        "sectionSubtitle": { "size": "16–18px", "weight": "400", "lineHeight": "1.6", "font": "body", "color": "text.body" },
+        "cardTitle": { "size": "18–20px", "weight": "600", "lineHeight": "1.3", "font": "body" },
+        "cardBody": { "size": "14–16px", "weight": "400", "lineHeight": "1.6", "font": "body", "color": "text.body" },
+        "buttonText": { "size": "15–16px", "weight": "600", "lineHeight": "1", "font": "body" },
+        "tagText": { "size": "13–14px", "weight": "500", "lineHeight": "1", "font": "body", "letterSpacing": "0.02em" },
+        "caption": { "size": "13–14px", "weight": "400", "lineHeight": "1.4", "font": "body", "color": "text.muted" },
+        "footerText": { "size": "13px", "weight": "400", "font": "body", "color": "text.muted" }
+      }
+    },
+
+    "spacing": {
+      "sectionPaddingVertical": "80–120px",
+      "sectionPaddingHorizontal": "24px (mobile) / 40px (tablet) / 0 (desktop, use maxWidth)",
+      "maxContentWidth": "1100–1200px",
+      "cardPadding": "28–36px",
+      "cardGap": "24–32px",
+      "elementGap": "16–24px",
+      "headingToSubtitle": "12–16px",
+      "subtitleToContent": "32–48px",
+      "buttonPaddingX": "28–36px",
+      "buttonPaddingY": "14–18px"
+    },
+
+    "borderRadius": {
+      "buttons": "50px (full pill shape)",
+      "cards": "16–20px",
+      "images": "16–24px",
+      "faqItems": "12–16px",
+      "tags": "50px",
+      "iconCircles": "50% (perfect circle)",
+      "testimonialCards": "16px",
+      "mapEmbed": "16–20px"
+    },
+
+    "shadows": {
+      "card": "0 4px 24px rgba(61, 90, 62, 0.06)",
+      "cardHover": "0 8px 32px rgba(61, 90, 62, 0.10)",
+      "button": "0 2px 12px rgba(61, 90, 62, 0.15)",
+      "image": "0 8px 40px rgba(61, 90, 62, 0.08)",
+      "testimonialCard": "0 2px 16px rgba(0, 0, 0, 0.06)"
+    },
+
+    "components": {
+
+      "navbar": {
+        "description": "Minimal — just the logo in the top-left of the hero. No sticky nav. No hamburger. The page is a single-scroll LP, so navigation is implicit via scroll.",
+        "logo": "Logo mark (icon) + 'Vânia Mello' in serif + 'Nutricionista' in small sans-serif below"
+      },
+
+      "heroSection": {
+        "layout": "Two-column: text left (55%), image right (45%). On mobile: stacks vertically, text first.",
+        "background": "Light sage (#F4F7F0) with a large, faint decorative cursive letter (like a giant 'V' or 'N') in the background, semi-transparent (#C5D4B3 at 15–20% opacity), positioned in the upper-right area behind the photo.",
+        "tagAboveTitle": "Pill-shaped tag with the credential text. Background: transparent or very subtle border. Text: small sans-serif, dark green.",
+        "title": "Large serif heading, 42–52px. Key emotional words in italic. Line-height tight (1.15). Dark green color.",
+        "subtitle": "Below the title, 16–18px sans-serif, regular weight, muted text color. Max-width ~500px to keep line length readable.",
+        "ctaButton": "Dark green pill button with white text + a small white circle with an arrow icon (→) on the right side of the button. Padding generous.",
+        "belowButton": "Small muted text: 'Atendimento em Vinhedo e Online'.",
+        "image": "Photo of Vânia — warm, approachable, professional. Rounded corners (20px). Can have a small floating 'social proof' badge overlaid in the bottom-right (like a Doctoralia verified badge or star rating mini-card).",
+        "socialProofBadge": "Small card overlaid on the bottom-right of the hero image, showing: profile photo thumbnail + name + verified icon + rating stars. White background, subtle shadow, rounded corners."
+      },
+
+      "marqueeBar": {
+        "description": "Horizontal infinite-scroll ticker strip below the hero section. Contains repeating benefit phrases separated by decorative dots or leaf icons.",
+        "background": "#C5D4B3 (pale olive/sage)",
+        "textColor": "#2C3E2D (dark green)",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "padding": "12–16px vertical",
+        "animation": "Smooth continuous left-scroll, infinite loop. CSS animation: translateX. Duration ~20–30s for a natural pace.",
+        "items": [
+          "Resultados que respeitam o seu ritmo",
+          "Planos alimentares que cabem na sua rotina",
+          "Mais energia e bem-estar no dia a dia",
+          "Alimentação leve sem culpa e sem restrições"
+        ],
+        "separator": "• or small leaf icon between each item"
+      },
+
+      "processSection": {
+        "layout": "Centered title + subtitle, then 3 cards in a horizontal row below. Cards connected by a subtle line or arrow indicators between them.",
+        "background": "#FFFFFF",
+        "cards": {
+          "count": 3,
+          "style": "White background, subtle sage border or very light shadow. Each card has: icon at top (line-art style, sage green) → card title (bold sans-serif) → short description (regular sans-serif, muted). Between cards 1→2 and 2→3, place a small green circle with a '>' arrow to show progression.",
+          "iconStyle": "Thin line-art icons in sage green (#7A9E7E). Simple, elegant — not filled. Examples: clipboard icon for consultation, fork+knife or document for plan, refresh/loop for follow-up.",
+          "borderRadius": "16–20px",
+          "padding": "32–40px"
+        }
+      },
+
+      "specialtiesSection": {
+        "layout": "Two columns of cards (3 per column = 6 total). Each card is a simple row: icon on the left + title and description on the right.",
+        "background": "#F4F7F0",
+        "cards": {
+          "style": "Clean, minimal. White or transparent background. Small green icon (circle with line-art icon inside) on the left, title in bold sans-serif, description in regular muted text below.",
+          "padding": "20–28px",
+          "gap": "20–24px"
+        }
+      },
+
+      "aboutSection": {
+        "layout": "Two-column: large photo of Vânia on the left (with rounded corners, ~45% width), text content on the right (~55%).",
+        "background": "#FFFFFF",
+        "image": "Warm, approachable photo. Rounded corners (20–24px). Can have subtle shadow.",
+        "title": "'Quem é <em>Vânia Mello</em>?' — serif heading with the name in italic.",
+        "content": "Bullet points with small green dot markers. Text in sans-serif body. Keep concise — 3–4 key points about expertise and approach.",
+        "ctaButton": "Dark green pill button below the text: 'Agende uma consulta'.",
+        "quote": "Optional: a highlighted quote box below or integrated — light green background, serif italic text, attribution below."
+      },
+
+      "testimonialsSection": {
+        "layout": "Full-width dark green background (#3D5A3E). Centered heading in white. 3 testimonial cards in a horizontal row below.",
+        "background": "#3D5A3E (dark sage green)",
+        "headingColor": "#FFFFFF with key word in italic",
+        "subtitle": "White text, lighter opacity",
+        "cards": {
+          "count": 3,
+          "background": "#FFFFFF",
+          "borderRadius": "16px",
+          "padding": "28–32px",
+          "shadow": "0 2px 16px rgba(0,0,0,0.06)",
+          "structure": [
+            "5 gold stars (★★★★★) at top",
+            "Testimonial quote text in dark body color, 14–15px, regular weight, wrapped in quotation marks",
+            "Divider line (subtle)",
+            "Patient first name + age + city — caption style, muted green"
+          ],
+          "starColor": "#D4A843 (warm gold)"
+        },
+        "ctaButton": "Below the cards, centered: white outline or white-filled button on the dark green background."
+      },
+
+      "locationSection": {
+        "layout": "Title and description on the left. Map embed and/or clinic photos on the right.",
+        "background": "#FFFFFF",
+        "title": "Serif heading with italic emphasis on key words",
+        "map": "Google Maps embed or static image with rounded corners (16–20px)",
+        "clinicPhotos": "Optional carousel/row of clinic interior photos with rounded corners",
+        "ctaButton": "Green pill button: 'Marque uma consulta'"
+      },
+
+      "faqSection": {
+        "layout": "Two-column: title + intro text on the left, accordion items on the right.",
+        "background": "#FFFFFF",
+        "title": "Serif heading, left-aligned. Subtitle text below.",
+        "accordionItems": {
+          "style": "Light sage background (#EDF2E6 or #F4F7F0), rounded corners (12–16px), padding 20–24px. Each item has: question text on the left (sans-serif, semi-bold) + a '+' icon on the right that rotates to '×' when expanded.",
+          "gap": "12–16px between items",
+          "expandedStyle": "Same background, content text appears below the question with 12px padding-top. Smooth expand animation (max-height transition)."
+        }
+      },
+
+      "finalCTASection": {
+        "layout": "Full-width dark green background (#3D5A3E). Can include a background image (blurred food/nature photo at low opacity). Text centered or left-aligned.",
+        "background": "#3D5A3E with optional decorative botanical elements",
+        "title": "Large serif heading in white. Key word in italic.",
+        "subtitle": "White body text, max-width ~600px",
+        "ctaButton": "White background with dark green text — OR — outlined white button. Pill shape. Arrow icon circle.",
+        "supportInfo": "Below button: location, hours, and contact info in small white/muted text"
+      },
+
+      "footer": {
+        "background": "#2C3E2D (darkest green)",
+        "layout": "Centered: logo + CRN number + social icon (Instagram). Minimal.",
+        "textColor": "rgba(255,255,255,0.6)",
+        "divider": "Subtle line above footer content"
+      },
+
+      "buttons": {
+        "primary": {
+          "background": "#3D5A3E",
+          "textColor": "#FFFFFF",
+          "borderRadius": "50px",
+          "padding": "14–18px vertical, 28–36px horizontal",
+          "fontSize": "15–16px",
+          "fontWeight": "600",
+          "fontFamily": "body (sans-serif)",
+          "iconCircle": "A 32–36px white circle on the right side of the button containing a dark green arrow (→ or ↗). This is a signature UI element — always include it.",
+          "hover": "Slightly lighter green + increased shadow",
+          "transition": "all 0.3s ease"
+        },
+        "secondary": {
+          "background": "transparent",
+          "border": "2px solid #3D5A3E",
+          "textColor": "#3D5A3E",
+          "borderRadius": "50px",
+          "hover": "Fill with #3D5A3E, text becomes white"
+        },
+        "onDarkBg": {
+          "background": "#FFFFFF",
+          "textColor": "#3D5A3E",
+          "iconCircle": "Dark green circle with white arrow"
+        }
+      },
+
+      "icons": {
+        "style": "Line-art, thin stroke (1.5–2px), NOT filled. Sage green (#7A9E7E) color. Simple and elegant — medical/health themed but not clinical. Think: minimalist, hand-drawn feel.",
+        "size": "40–56px for section icons, 20–24px for inline icons",
+        "containerCircle": "Optional: place icons inside a circle with #EDF2E6 background and no border, size 64–80px"
+      }
+    },
+
+    "animations": {
+      "scrollReveal": "Elements fade-in + slide up slightly (translateY: 20px → 0) as they enter the viewport. Duration: 0.6s. Ease: cubic-bezier(0.25, 0.46, 0.45, 0.94). Stagger children by 0.1s delay.",
+      "marquee": "Infinite horizontal scroll. CSS: @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }. Duration: 25s linear.",
+      "buttonHover": "Scale to 1.02, shadow increases, icon circle slides right slightly (translateX: 4px). Duration: 0.3s ease.",
+      "faqExpand": "max-height transition from 0 to auto (use a large max-height value like 500px). Duration: 0.4s ease. '+' icon rotates 45° to become '×'.",
+      "cardHover": "TranslateY: -4px + shadow increase. Duration: 0.3s ease."
+    },
+
+    "responsiveBreakpoints": {
+      "mobile": "max-width: 640px",
+      "tablet": "max-width: 1024px",
+      "desktop": "min-width: 1025px",
+      "rules": [
+        "Hero: stack vertically on mobile (text → image). Image becomes 100% width.",
+        "Process cards: stack vertically on mobile. Remove arrow connectors, use vertical line or numbers instead.",
+        "Specialty cards: single column on mobile.",
+        "Testimonials: horizontal scroll (snap) on mobile or stack vertically.",
+        "About section: stack vertically on mobile (image on top, text below).",
+        "FAQ: full-width, single column on all screens.",
+        "Section padding reduces to 48–64px on mobile.",
+        "Headings scale down ~20% on mobile.",
+        "Buttons become full-width on mobile."
+      ]
+    },
+
+    "imageGuidelines": {
+      "heroPhoto": "Professional but warm. Vânia smiling, ideally holding food (fruit, etc.) or in her clinic. Clean background. Shot from waist up. Rounded corners: 20px.",
+      "aboutPhoto": "More personal — Vânia in a casual-professional setting. Can be slightly warmer/lifestyle tone. Rounded corners: 20–24px.",
+      "clinicPhotos": "Clean, well-lit interior shots. Rounded corners: 16px. Show the welcoming environment.",
+      "photoOverlap": "On desktop, the hero image can slightly overlap or extend beyond its column boundary for visual interest."
+    }
+  }
+}

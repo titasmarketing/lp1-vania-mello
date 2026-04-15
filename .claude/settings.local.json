@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(firecrawl scrape:*)",
+      "Bash(grep -o 'hsl\\([^\\)]*\\)\\\\|oklch\\([^\\)]*\\)\\\\|#[0-9a-fA-F]\\\\{3,8\\\\}\\\\|rgb\\([^\\)]*\\)\\\\|rgba\\([^\\)]*\\)' .firecrawl/vania-mello-raw.html)"
+    ]
+  }
+}
