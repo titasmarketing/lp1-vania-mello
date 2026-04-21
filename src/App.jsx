@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Clock } from 'lucide-react';
+import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Clock, Heart, Leaf, Flower2, Venus } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -191,7 +191,43 @@ export default function App() {
             />
           </div>
 
-          <div className="mt-16 text-center reveal">
+          {/* Diagnostic Features Highlight */}
+          <div className="mt-16 md:mt-24 max-w-[1050px] mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-14 bg-secondary p-8 md:p-12 rounded-[32px] reveal border border-primary/5 relative z-10 hover:shadow-card-hover transition-all duration-300">
+            <div className="flex-1 w-full relative">
+              <img 
+                src="/Fotos Vânia/IMG_9683.jpg" 
+                alt="Equipamentos de medição" 
+                className="w-full h-auto aspect-square md:aspect-[4/3] object-cover rounded-[24px] shadow-img"
+              />
+              <div className="hidden md:flex absolute -bottom-6 -right-5 bg-white p-4 rounded-[16px] shadow-card items-center justify-center">
+                 <Target size={28} className="text-primary opacity-80" />
+              </div>
+            </div>
+            <div className="flex-[1.2] text-center md:text-left">
+              <span className="inline-block py-1.5 px-4 rounded-full bg-white text-primary font-semibold text-[13px] uppercase tracking-wider mb-5 shadow-sm border border-primary/5">
+                Alta Tecnologia
+              </span>
+              <h3 className="text-[22px] sm:text-[26px] md:text-[34px] font-heading font-semibold text-text-heading mb-4 leading-tight whitespace-nowrap">
+                Diferenciais <em>Diagnósticos</em>
+              </h3>
+              <p className="text-text-muted text-[15px] md:text-[16px] leading-relaxed mb-6">
+                O tratamento da sua saúde não pode ser baseado em uma "dieta de gaveta" padronizada e restritiva. 
+                Por isso, utilizo ferramentas de alta precisão para analisar profundamente a sua composição corporal e o seu gasto energético real.
+              </p>
+              <ul className="space-y-4 text-left text-[15px] md:text-[16px]">
+                <li className="flex items-start gap-4">
+                   <Activity size={22} className="text-accent shrink-0 mt-0.5" />
+                   <span className="text-text-body leading-relaxed"><strong>Bioimpedância e Calorimetria:</strong> Entendemos exatamente de que o seu corpo é feito e como ele processa energia.</span>
+                </li>
+                <li className="flex items-start gap-4">
+                   <CheckCircle size={22} className="text-accent shrink-0 mt-0.5" />
+                   <span className="text-text-body leading-relaxed"><strong>Meta 100% Exata:</strong> Com estes dados em mãos, eliminamos o achismo e criamos um planejamento que vai direto ao ponto.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-16 md:mt-24 text-center reveal">
             <button className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group" onClick={() => window.location.href = '#'}>
               Agendar minha consulta
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] bg-white rounded-full flex items-center justify-center ml-4 text-primary transform group-hover:translate-x-1 transition duration-300 ease-out"><ArrowRight size={18} /></span>
@@ -203,28 +239,41 @@ export default function App() {
       {/* About Section */}
       <section className="py-20 lg:py-[100px] px-6 md:px-10 bg-secondary">
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-          <div className="flex-1 w-full reveal order-2 md:order-1">
+          <div className="flex-1 w-full reveal hidden md:block">
             <img 
               src="/Fotos Vânia/IMG_9689.jpg" 
               alt="Vânia Mello" 
-              className="w-full h-[600px] object-cover rounded-[24px] shadow-img aspect-[3/4] md:aspect-auto"
+              className="w-full h-[600px] object-cover rounded-[24px] shadow-img"
             />
           </div>
-          <div className="flex-1 reveal order-1 md:order-2">
-            <h2 className="text-[40px] leading-tight mb-6">
+          <div className="flex-1 reveal">
+            <h2 className="text-[36px] md:text-[40px] leading-tight mb-8 md:mb-6 text-center md:text-left">
               Quem é <em>Vânia Mello</em>?
             </h2>
+            
+            {/* Mobile Image (Entre título e texto) */}
+            <div className="block md:hidden mb-10 max-w-[260px] mx-auto">
+              <img 
+                src="/Fotos Vânia/IMG_9689.jpg" 
+                alt="Vânia Mello" 
+                className="w-full aspect-[4/5] object-cover rounded-[24px] shadow-img mx-auto"
+              />
+            </div>
             <div className="space-y-4 text-[16px] text-text-body mb-8">
               <p>
-                Olá! Sou Vania Mello, nutricionista especializada no manejo de Doenças Crônicas não Transmissíveis. Minha jornada na nutrição começou na Faculdade Eduvale de Avaré e foi aprimorada com uma pós-graduação no renomado Hospital Albert Einstein.
+                Sou nutricionista, graduada pela Faculdade Eduvale de Avaré e pós-graduada em Doenças Crônicas Não Transmissíveis pelo Instituto Albert Einstein. Minha atuação na nutrição clínica é pautada pelo rigor científico e pelo uso de tecnologias de precisão para compreender a individualidade de cada metabolismo.
               </p>
               <p>
-                Com 4 anos de experiência, minha paixão é ajudar pessoas a transformar a saúde através da alimentação. Acredito que a nutrição é a chave para uma vida mais saudável e feliz, e minha missão é tornar esse conhecimento acessível e prático para você.
+                Minha prática busca unir o acolhimento humano à exatidão diagnóstica. Entendo que cada paciente possui objetivos únicos, seja a busca por mais vitalidade, a prevenção de condições hereditárias ou o manejo de quadros clínicos já diagnosticados. Por isso, utilizo ferramentas avançadas de avaliação para estruturar estratégias que respeitem o estilo de vida e a biologia de quem atendo.
+              </p>
+              <p>
+                Acredito em uma nutrição transformadora, capaz de promover saúde em todas as etapas da vida, oferecendo suporte técnico para que cada pessoa alcance sua melhor versão de forma segura e sustentável.
               </p>
               <ul className="space-y-3 pt-6">
-                <li className="flex items-start gap-3"><CheckCircle size={20} className="text-accent shrink-0 mt-0.5" /> <span>Nutricionista clínica especialista em doenças crônicas</span></li>
-                <li className="flex items-start gap-3"><CheckCircle size={20} className="text-accent shrink-0 mt-0.5" /> <span>Foco em Diabetes, Hipertensão, Obesidade e Colesterol</span></li>
-                <li className="flex items-start gap-3"><CheckCircle size={20} className="text-accent shrink-0 mt-0.5" /> <span>Atendimento humanizado que respeita sua individualidade</span></li>
+                <li className="flex items-start gap-3"><CheckCircle size={20} className="text-accent shrink-0 mt-0.5" /> <span>Nutrição Clínica Especializada (Pós-graduação Albert Einstein)</span></li>
+                <li className="flex items-start gap-3"><CheckCircle size={20} className="text-accent shrink-0 mt-0.5" /> <span>Avaliação de Composição Corporal e Metabolismo com Alta Precisão</span></li>
+                <li className="flex items-start gap-3"><CheckCircle size={20} className="text-accent shrink-0 mt-0.5" /> <span>Manejo Nutricional de Condições Metabólicas e Prevenção de Doenças</span></li>
+                <li className="flex items-start gap-3"><CheckCircle size={20} className="text-accent shrink-0 mt-0.5" /> <span>Foco em Saúde Integrativa e Longevidade</span></li>
               </ul>
             </div>
             
@@ -349,7 +398,7 @@ export default function App() {
           <div className="flex-[1.2] reveal w-full">
             <h2 className="text-[36px] md:text-[40px] mb-8">Dúvidas <em>Frequentes</em></h2>
             <div className="space-y-4">
-              <AccordionItem title="Você aceita convênio médico (SulAmérica, etc)?" content="Os atendimentos são particulares, mas emito recibo para solicitação de reembolso junto ao seu convênio, de acordo com o seu plano." />
+              <AccordionItem title="Você aceita convênio médico?" content="Atendimentos apenas ao Sulamérica Saúde. Os atendimentos são particulares, mas emito recibo para solicitação de reembolso junto ao seu convênio, de acordo com o seu plano." />
               <AccordionItem title="Quanto tempo demora para o plano alimentar ficar pronto?" content="Seu plano alimentar é entregue de forma ágil, focado nas suas necessidades reais e na sua rotina atual." />
               <AccordionItem title="Preciso levar exames na primeira consulta?" content="Se você tiver exames recentes, é ótimo trazer! Mas se não tiver, nós avaliamos a necessidade de solicitações durante a consulta." />
               <AccordionItem title="Você atende crianças e idosos?" content="O acompanhamento é especializado para adultos e idosos, com foco total no controle de doenças crônicas e longevidade." />
@@ -433,27 +482,98 @@ function ProcessColumn({ step, icon, title, desc }) {
   );
 }
 
-function SpecialtyCard({ iconSrc, title, desc }) {
+const CustomWaistIcon = ({ size = 24, strokeWidth = 2, className = "" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M7 3C8.5 7.5 9 11.5 7 21" />
+    <path d="M17 3C15.5 7.5 15 11.5 17 21" />
+    <path d="M7 16 Q 12 18 17 16" />
+    <path d="M10 8 A4 4 0 0 0 8 13.5" />
+    <path d="M8 13.5 V 10" />
+    <path d="M8 13.5 H 11.5" />
+    <path d="M14 13 A4 4 0 0 0 16 7.5" />
+    <path d="M16 7.5 V 11" />
+    <path d="M16 7.5 H 12.5" />
+  </svg>
+);
+
+const CustomStomachIcon = ({ size = 24, strokeWidth = 2, className = "" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M10 2v3.5c0 1.5-1 2.5-2 4A4.5 4.5 0 0 0 8 16c2 3 5.5 3 8.5 1s4.5-5.5 4.5-8.5c0-3-2-4.5-3.5-5-1.5-.5-2.5-1.5-2.5-2.5V2" />
+    <path d="M8 16c-1 1-2 2-2 4" />
+    <path d="M12 12c1 1 2 1 3 0" />
+  </svg>
+);
+
+const CustomKidneyIcon = ({ size = 24, strokeWidth = 2, className = "" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M10 8C7 5 3 6 3 10c0 4 3.5 8 5.5 8 2 0 3-1 3-3s-1-2.5-1-4 1-2 1-3z" />
+    <path d="M14 8c3-3 7-2 7 2 0 4-3.5 8-5.5 8-2 0-3-1-3-3s1-2.5 1-4-1-2-1-3z" />
+    <path d="M10 12h4" />
+  </svg>
+);
+
+function SpecialtyCard({ icon: Icon, title, desc, tags }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-5 md:gap-6 bg-white p-8 md:p-10 rounded-[24px] shadow-card hover:shadow-card-hover transition duration-300 border border-primary/5 h-full">
-      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-tertiary flex-shrink-0 flex items-center justify-center p-3.5 mx-auto sm:mx-0">
-        <img src={iconSrc} alt={title} className="w-full h-full object-contain mix-blend-multiply" />
+    <div className="flex flex-col gap-5 md:gap-6 bg-white p-6 md:p-8 rounded-[24px] shadow-card hover:shadow-card-hover transition duration-300 border border-primary/5 h-full justify-start">
+      <div className="flex flex-col sm:flex-row gap-4 md:gap-5 items-center sm:items-start text-center sm:text-left">
+        <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-tertiary flex-shrink-0 flex items-center justify-center p-3.5 mx-auto sm:mx-0 text-primary">
+          <Icon size={32} strokeWidth={1.5} />
+        </div>
+        <div>
+          <h4 className="font-semibold text-xl md:text-[22px] mb-2 text-text-heading">{title}</h4>
+          <p className="text-text-muted text-[14px] md:text-[15px] leading-relaxed">{desc}</p>
+        </div>
       </div>
-      <div className="text-center sm:text-left">
-        <h4 className="font-semibold text-xl md:text-[22px] mb-2">{title}</h4>
-        <p className="text-text-muted text-[15px] md:text-base leading-relaxed">{desc}</p>
-      </div>
+      {tags && tags.length > 0 && (
+        <div className="flex flex-wrap items-center justify-center gap-2 pt-5 border-t border-ui-divider/40 mt-2">
+          {tags.map((tag, idx) => (
+            <span key={idx} className="inline-flex items-center px-3 py-1.5 rounded-full bg-secondary text-primary/90 text-[12px] font-semibold tracking-wide leading-tight shadow-sm border border-primary/10">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
 
 const SPECIALTIES_DATA = [
-  { iconSrc: "/activity.svg", title: "Diabetes Tipo 2 e Pré-Diabetes", desc: "Controle glicêmico através da alimentação sem restrições severas." },
-  { iconSrc: "/heart.svg", title: "Hipertensão", desc: "Estratégias nutricionais para regular a pressão arterial." },
-  { iconSrc: "/scale.svg", title: "Emagrecimento e Obesidade", desc: "Perda de peso sustentável, focada na mudança real de hábitos." },
-  { iconSrc: "/droplets.svg", title: "Colesterol e Triglicerídeos", desc: "Ajustes no perfil lipídico para proteger a saúde cardiovascular." },
-  { iconSrc: "/dumbbell.svg", title: "Ganho de Massa Muscular", desc: "Nutrição otimizada para fortalecimento e composição corporal." },
-  { iconSrc: "/stethoscope.svg", title: "Outras Doenças Crônicas", desc: "Acompanhamento individualizado para diversas condições." }
+  { 
+    icon: CustomWaistIcon, 
+    title: "Metabólicas e Endócrinas", 
+    desc: "O pilar central do controle clínico e metabólico, cuidando da raiz do seu bem-estar.",
+    tags: ["Diabetes e Pré-diabetes", "Obesidade e Sobrepeso", "Pós-Bariátrica", "Colesterol e Triglicerídeos", "Síndrome Metabólica", "Tireoide"]
+  },
+  { 
+    icon: Heart, 
+    title: "Saúde Cardiovascular", 
+    desc: "Estratégias nutricionais avançadas para regular a pressão e proteger o seu coração.",
+    tags: ["Hipertensão Arterial", "Insuficiência Cardíaca", "Recuperação Pós-Infarto", "Pós-Cirurgia Cardíaca"]
+  },
+  { 
+    icon: CustomStomachIcon, 
+    title: "Digestiva e Intestinal", 
+    desc: "Cuidado especializado para o bom funcionamento do seu intestino e melhoria na digestão.",
+    tags: ["Gastrite e Úlceras", "Refluxo (DRGE)", "Intestino Irritável (FODMAPs)", "Doenças Inflamatórias", "Intolerâncias", "Constipação", "Gordura no Fígado"]
+  },
+  { 
+    icon: Venus, 
+    title: "Saúde da Mulher", 
+    desc: "Nutrição funcional focada no equilíbrio hormonal em todas as fases da sua vida.",
+    tags: ["Ovários Policísticos (SOP)", "Endometriose", "Menopausa e Climatério", "Fertilidade"]
+  },
+  { 
+    icon: CustomKidneyIcon, 
+    title: "Renais e Hepáticas", 
+    desc: "Acompanhamento protetor e altamente qualificado para preservar suas funções.",
+    tags: ["Doença Renal Crônica", "Cálculos Renais", "Cirrose Hepática"]
+  },
+  { 
+    icon: Stethoscope, 
+    title: "Outras Condições Clínicas", 
+    desc: "Suporte e cuidado clínico direcionado para fortalecer seu organismo como um todo.",
+    tags: ["Sarcopenia e Osteoporose", "Anemias", "Transtornos Alimentares", "Nutrição Oncológica"]
+  }
 ];
 
 function SpecialtiesContent() {
@@ -520,7 +640,7 @@ function SpecialtiesContent() {
         <div className="overflow-hidden w-full rounded-[24px]">
           <div 
             className="flex transition-transform duration-700 ease-in-out w-full select-none cursor-grab active:cursor-grabbing"
-            style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+            style={{ transform: `translateX(-${activeIndex * 100}%)`, touchAction: 'pan-y' }}
             onTouchStart={(e) => handleDragStart(e.targetTouches[0].clientX)}
             onTouchMove={(e) => handleDragMove(e.targetTouches[0].clientX)}
             onTouchEnd={handleDragEnd}
@@ -534,7 +654,7 @@ function SpecialtiesContent() {
             }}
           >
             {SPECIALTIES_DATA.map((item, idx) => (
-              <div key={idx} className="w-full flex-shrink-0 box-border pointer-events-none sm:pointer-events-auto">
+              <div key={idx} className="w-full flex-shrink-0 box-border">
                 <SpecialtyCard {...item} />
               </div>
             ))}
