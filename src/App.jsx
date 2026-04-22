@@ -217,7 +217,7 @@ export default function App() {
               <ul className="space-y-4 text-left text-[15px] md:text-[16px]">
                 <li className="flex items-start gap-4">
                    <Activity size={22} className="text-accent shrink-0 mt-0.5" />
-                   <span className="text-text-body leading-relaxed"><strong>Bioimpedância e Calorimetria:</strong> Entendemos exatamente de que o seu corpo é feito e como ele processa energia.</span>
+                   <span className="text-text-body leading-relaxed"><strong>Bioimpedância e Dinamometria:</strong> Entendemos exatamente de que o seu corpo é feito e como ele processa energia.</span>
                 </li>
                 <li className="flex items-start gap-4">
                    <CheckCircle size={22} className="text-accent shrink-0 mt-0.5" />
