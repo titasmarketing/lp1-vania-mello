@@ -84,7 +84,7 @@ export default function App() {
               Nutrição clínica especializada em Doenças Crônicas para quem precisa controlar diabetes, pressão alta, colesterol e peso.
             </p>
             
-            <button className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group" onClick={() => window.location.href = '#'}>
+            <button className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
               Quero Agendar Minha Consulta
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] bg-white rounded-full flex items-center justify-center ml-4 text-primary transform group-hover:translate-x-1 transition duration-300 ease-out">
                 <ArrowRight size={18} />
@@ -228,7 +228,7 @@ export default function App() {
           </div>
 
           <div className="mt-16 md:mt-24 text-center reveal">
-            <button className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group" onClick={() => window.location.href = '#'}>
+            <button className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
               Agendar minha consulta
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] bg-white rounded-full flex items-center justify-center ml-4 text-primary transform group-hover:translate-x-1 transition duration-300 ease-out"><ArrowRight size={18} /></span>
             </button>
@@ -309,7 +309,7 @@ export default function App() {
             />
           </div>
           <div className="mt-16 reveal">
-             <button className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
+             <button className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
                 Agendar minha consulta
                 <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
                   <ArrowRight size={18} />
@@ -417,7 +417,7 @@ export default function App() {
             <p className="text-lg opacity-90 mb-10 max-w-lg mx-auto">
               Agende sua consulta e vamos juntos construir um caminho sustentável para a sua saúde e bem-estar.
             </p>
-            <button className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
+            <button className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
                 Agendar Minha Consulta
                 <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
                   <ArrowRight size={18} />
@@ -443,7 +443,7 @@ export default function App() {
 function FloatingWhatsApp() {
   return (
     <a 
-      href="#" 
+      href="https://wa.me/+5519997702030?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20V%C3%A2nia%20Mello!" 
       target="_blank" 
       rel="noopener noreferrer" 
       className="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-[#25D366] text-white p-4 rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:shadow-[0_12px_45px_rgb(37,211,102,0.6)] hover:-translate-y-1 transition-all duration-300 z-50 flex items-center justify-center group"
@@ -482,17 +482,12 @@ function ProcessColumn({ step, icon, title, desc }) {
   );
 }
 
-const CustomWaistIcon = ({ size = 24, strokeWidth = 2, className = "" }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M7 3C8.5 7.5 9 11.5 7 21" />
-    <path d="M17 3C15.5 7.5 15 11.5 17 21" />
-    <path d="M7 16 Q 12 18 17 16" />
-    <path d="M10 8 A4 4 0 0 0 8 13.5" />
-    <path d="M8 13.5 V 10" />
-    <path d="M8 13.5 H 11.5" />
-    <path d="M14 13 A4 4 0 0 0 16 7.5" />
-    <path d="M16 7.5 V 11" />
-    <path d="M16 7.5 H 12.5" />
+const CustomHealthSyncIcon = ({ size = 24, strokeWidth = 2, className = "" }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={strokeWidth} d="M14.98,41.8753a20.4839,20.4839,0,1,1,18.21-.0832"/>
+    <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={strokeWidth} d="M31.8164,38.6064,29.8255,42.97,34.0715,45"/>
+    <circle fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={strokeWidth} cx="25.3111" cy="12.1986" r="2.2096"/>
+    <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={strokeWidth} d="M19.7031,30.2216l-2.9186,3.5558c-1.3981,1.618.62,3.0368,2.0995,1.6362l2.859-3.6012.9384-3.5211L24.19,29.8l1.0058,5.2074c.6653,1.4484,2.8278,1.3689,2.7575-.4942l-1.4908-5.5638-2.1363-3.7,1.1964-4.465,1.3349.3576a.7774.7774,0,0,0,.3879.7716c.465.2483,3.8078,1.2722,3.8078,1.2722,2.1028.6458,2.34-1.4709.6406-1.9639L28.91,20.4755l-1.378-2.2949-2.239-2.0056L21.87,16.0957l-4.8377,2.9207-1.7968,4.8018c-.3972,1.3419,1.5265,1.6913,2.058.6475.2582-.4581,1.5582-3.5518,1.5582-3.5518l2.8247-1.4015-1.3818,6.3337Z"/>
   </svg>
 );
 
@@ -539,7 +534,7 @@ function SpecialtyCard({ icon: Icon, title, desc, tags }) {
 
 const SPECIALTIES_DATA = [
   { 
-    icon: CustomWaistIcon, 
+    icon: CustomHealthSyncIcon, 
     title: "Metabólicas e Endócrinas", 
     desc: "O pilar central do controle clínico e metabólico, cuidando da raiz do seu bem-estar.",
     tags: ["Diabetes e Pré-diabetes", "Obesidade e Sobrepeso", "Pós-Bariátrica", "Colesterol e Triglicerídeos", "Síndrome Metabólica", "Tireoide"]
