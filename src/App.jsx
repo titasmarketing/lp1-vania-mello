@@ -84,12 +84,12 @@ export default function App() {
               Nutrição clínica especializada em Doenças Crônicas para quem precisa controlar diabetes, pressão alta, colesterol e peso.
             </p>
             
-            <button className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
+            <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group">
               Quero Agendar Minha Consulta
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] bg-white rounded-full flex items-center justify-center ml-4 text-primary transform group-hover:translate-x-1 transition duration-300 ease-out">
                 <ArrowRight size={18} />
               </span>
-            </button>
+            </a>
             <p className="mt-3 md:mt-4 text-[13px] md:text-sm text-text-muted">Atendimento em Vinhedo e Região</p>
           </div>
 
@@ -228,10 +228,10 @@ export default function App() {
           </div>
 
           <div className="mt-16 md:mt-24 text-center reveal">
-            <button className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
+            <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group">
               Agendar minha consulta
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] bg-white rounded-full flex items-center justify-center ml-4 text-primary transform group-hover:translate-x-1 transition duration-300 ease-out"><ArrowRight size={18} /></span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -309,12 +309,12 @@ export default function App() {
             />
           </div>
           <div className="mt-16 reveal">
-             <button className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
+             <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
                 Agendar minha consulta
                 <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
                   <ArrowRight size={18} />
                 </span>
-             </button>
+             </a>
           </div>
         </div>
       </section>
@@ -417,12 +417,12 @@ export default function App() {
             <p className="text-lg opacity-90 mb-10 max-w-lg mx-auto">
               Agende sua consulta e vamos juntos construir um caminho sustentável para a sua saúde e bem-estar.
             </p>
-            <button className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group" onClick={() => window.open('https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo', '_blank')}>
+            <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
                 Agendar Minha Consulta
                 <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
                   <ArrowRight size={18} />
                 </span>
-             </button>
+             </a>
           </div>
         </div>
         <div className="border-t border-white/10 pt-8 pb-10 flex flex-col items-center">
