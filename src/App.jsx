@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Clock, Heart, Leaf, Flower2, Venus } from 'lucide-react';
+import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Clock, Heart, Leaf, Flower2, Venus, Calendar } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -359,12 +359,14 @@ export default function App() {
                
                <div className="flex items-start gap-5">
                   <div className="mt-1 flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                    <WhatsAppIcon width={24} height={24} />
+                    <Calendar size={24} />
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="font-semibold text-lg mb-1 text-text-heading">Contato</h4>
+                    <h4 className="font-semibold text-lg mb-1 text-text-heading">Agendamento</h4>
                     <p className="text-text-muted text-[16px] leading-relaxed text-primary font-medium">
-                      Apenas Atendimento via WhatsApp
+                      <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        Agendar consulta pelo Doctoralia
+                      </a>
                     </p>
                   </div>
                </div>
@@ -434,7 +436,7 @@ export default function App() {
         </div>
       </footer>
       {/* Floating WhatsApp */}
-      <FloatingWhatsApp />
+      {/* <FloatingWhatsApp /> */}
     </div>
   );
 }
