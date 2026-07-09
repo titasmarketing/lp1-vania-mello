@@ -26,18 +26,30 @@
   --animate-marquee: marquee 25s linear infinite;
 
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
 @layer base {
-  html, body {
+
+  html,
+  body {
     @apply bg-secondary text-text-body font-body antialiased;
     scroll-behavior: smooth;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading text-text-heading;
   }
 }

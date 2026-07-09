@@ -84,7 +84,7 @@ export default function App() {
               Nutrição clínica especializada em Doenças Crônicas para quem precisa controlar diabetes, pressão alta, colesterol e peso.
             </p>
             
-            <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group">
+            <a href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" target="_blank" rel="noopener noreferrer" role="button" className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group">
               Quero Agendar Minha Consulta
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] bg-white rounded-full flex items-center justify-center ml-4 text-primary transform group-hover:translate-x-1 transition duration-300 ease-out">
                 <ArrowRight size={18} />
@@ -228,7 +228,7 @@ export default function App() {
           </div>
 
           <div className="mt-16 md:mt-24 text-center reveal">
-            <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group">
+            <a href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" target="_blank" rel="noopener noreferrer" role="button" className="inline-flex items-center justify-center bg-primary text-white font-body font-semibold text-[15px] sm:text-[16px] py-[14px] px-[28px] sm:py-[18px] sm:px-[36px] rounded-pill shadow-btn hover:shadow-card-hover transform hover:scale-[1.02] transition duration-300 ease-out group">
               Agendar minha consulta
               <span className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] bg-white rounded-full flex items-center justify-center ml-4 text-primary transform group-hover:translate-x-1 transition duration-300 ease-out"><ArrowRight size={18} /></span>
             </a>
@@ -309,7 +309,7 @@ export default function App() {
             />
           </div>
           <div className="mt-16 reveal">
-             <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
+             <a href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" target="_blank" rel="noopener noreferrer" role="button" className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
                 Agendar minha consulta
                 <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
                   <ArrowRight size={18} />
@@ -364,8 +364,8 @@ export default function App() {
                   <div className="flex flex-col">
                     <h4 className="font-semibold text-lg mb-1 text-text-heading">Agendamento</h4>
                     <p className="text-text-muted text-[16px] leading-relaxed text-primary font-medium">
-                      <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        Agendar consulta pelo Doctoralia
+                     <a href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        Agendar consulta pelo WhatsApp
                       </a>
                     </p>
                   </div>
@@ -419,7 +419,7 @@ export default function App() {
             <p className="text-lg opacity-90 mb-10 max-w-lg mx-auto">
               Agende sua consulta e vamos juntos construir um caminho sustentável para a sua saúde e bem-estar.
             </p>
-            <a href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" target="_self" role="button" className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
+            <a href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" target="_blank" rel="noopener noreferrer" role="button" className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
                 Agendar Minha Consulta
                 <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
                   <ArrowRight size={18} />
@@ -445,7 +445,7 @@ export default function App() {
 function FloatingWhatsApp() {
   return (
     <a 
-      href="https://wa.me/+5519997702030?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20nutricionista%20V%C3%A2nia%20Mello!" 
+      href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" 
       target="_blank" 
       rel="noopener noreferrer" 
       className="fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-[#25D366] text-white p-4 rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.4)] hover:shadow-[0_12px_45px_rgb(37,211,102,0.6)] hover:-translate-y-1 transition-all duration-300 z-50 flex items-center justify-center group"
