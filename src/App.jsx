@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Clock, Heart, Leaf, Flower2, Venus, Calendar } from 'lucide-react';
+import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Clock, Heart, Leaf, Flower2, Venus, Calendar, ChevronLeft, ChevronRight, ExternalLink, ShieldCheck, Quote } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,6 +153,9 @@ export default function App() {
         </div>
       </section>
 
+      {/* Testimonials (Doctoralia Verificados) */}
+      <DoctoraliaTestimonialsSection />
+
       {/* Process Section */}
       <section className="py-20 lg:py-[100px] px-6 md:px-10 bg-white relative">
         <div className="max-w-[1200px] mx-auto">
@@ -280,41 +283,6 @@ export default function App() {
             <div className="p-6 md:p-8 bg-primary shadow-lg rounded-2xl italic text-[18px] md:text-[20px] text-white font-heading mt-6 leading-relaxed relative">
               "Não trato doenças, cuido de pessoas. Seu plano alimentar precisa se adaptar à sua vida, e não o contrário."
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 lg:py-[100px] px-6 md:px-10 bg-primary text-white">
-        <div className="max-w-[1200px] mx-auto text-center reveal">
-          <h2 className="text-[36px] md:text-[40px] text-white tracking-tight mb-4">O que dizem os <em>pacientes</em></h2>
-          <p className="text-[17px] text-white/80 mt-2 mb-16 max-w-2xl mx-auto leading-relaxed">
-            Histórias reais de pacientes que encontraram aqui orientação, acolhimento e um plano que funcionou de verdade.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 stagger-container text-left">
-            <TestimonialCard 
-              quote="A Vânia mudou completamente minha visão sobre dieta. Consegui controlar minha glicemia sem deixar de comer o que gosto. O acompanhamento é muito humano e próximo."
-              name="Mariana S."
-              info="42 anos — Vinhedo"
-            />
-            <TestimonialCard 
-              quote="Depois de anos lutando contra o efeito sanfona, finalmente encontrei um plano que consigo seguir. Meus exames de colesterol nunca estiveram tão bons. Recomendo de olhos fechados!"
-              name="Carlos E."
-              info="55 anos — Valinhos"
-            />
-            <TestimonialCard 
-              quote="O que mais me impressionou foi como ela adaptou tudo à minha rotina corrida de trabalho. Não passo fome e tenho muito mais energia ao longo do dia."
-              name="Juliana P."
-              info="38 anos — Campinas"
-            />
-          </div>
-          <div className="mt-16 reveal">
-             <a href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" target="_blank" rel="noopener noreferrer" role="button" className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group">
-                Agendar minha consulta
-                <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
-                  <ArrowRight size={18} />
-                </span>
-             </a>
           </div>
         </div>
       </section>
@@ -707,5 +675,313 @@ function AccordionItem({ title, content }) {
         <p className="text-text-body text-[15px] pb-2">{content}</p>
       </div>
     </div>
+  );
+}
+
+// Doctoralia Real Reviews & Interactive Carousel
+const doctoraliaReviews = [
+  {
+    id: 1,
+    name: "Luana Fernandes",
+    initial: "L",
+    date: "29 de julho de 2026",
+    tag: "Primeira consulta Nutrição",
+    location: "Íntegra Clinic",
+    rating: 5,
+    verified: true,
+    quote: "Um amor de nutri! Escutou meus desafios sem me julgar e conduziu a consulta com excelência."
+  },
+  {
+    id: 2,
+    name: "Glauco",
+    initial: "G",
+    date: "15 de julho de 2026",
+    tag: "Nutrição Familiar",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Eu e minha esposa já fazemos acompanhamento nutricional com ela e estamos muito satisfeitos. Então decidi levar meu filho mais velho também. Ele adorou a abordagem dela (versátil, se adaptou para conversar com adolescente de 15 anos), mas também todo conhecimento e experiência técnica. Já é a Nutricionista da minha família."
+  },
+  {
+    id: 3,
+    name: "Daniela",
+    initial: "D",
+    date: "15 de julho de 2026",
+    tag: "Consulta Nutricional",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Muito atenciosa, educada, realmente interessada em ajudar. Excelente profissional."
+  },
+  {
+    id: 4,
+    name: "Regis",
+    initial: "R",
+    date: "6 de julho de 2026",
+    tag: "Consulta Presencial",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Excelente profissional, pontual e detalhista nas explicações."
+  },
+  {
+    id: 5,
+    name: "Jacqueline Zaia",
+    initial: "J",
+    date: "1 de julho de 2026",
+    tag: "Análise Criteriosa",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Excelente profissional! Fiquei realmente encantada. Foi muito além de tirar minhas dúvidas e orientar corretamente após análise criteriosa."
+  },
+  {
+    id: 6,
+    name: "Darlyane",
+    initial: "D",
+    date: "29 de junho de 2026",
+    tag: "Acompanhamento Nutricional",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Uma excelente profissional, atenciosa, paciente, ótima explicação."
+  },
+  {
+    id: 7,
+    name: "Valdirene Ribeiro",
+    initial: "V",
+    date: "1 de junho de 2026",
+    tag: "Bioimpedância & Exames",
+    location: "Íntegra Clinic",
+    rating: 5,
+    verified: true,
+    quote: "Minha experiência com a Nutricionista Vania Mello foi excelente. Atendimento atencioso, consulta completa, exames realizados na hora e explicações muito claras. Superou minhas expectativas e certamente vou recomendá-la."
+  },
+  {
+    id: 8,
+    name: "Helena Lima",
+    initial: "H",
+    date: "26 de maio de 2026",
+    tag: "Consulta Humanizada",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Foi incrível. A Dra. Vânia foi sublime e esclarecedora. Ótima ouvinte e conselheira. Vou querer vê-la novamente. Nota 1000!!!! Eficiente e objetiva. Recomendo muito."
+  },
+  {
+    id: 9,
+    name: "Michele",
+    initial: "M",
+    date: "26 de maio de 2026",
+    tag: "Reeducação Alimentar",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Atenciosa aos detalhes, preocupada em fazer o melhor para o paciente não sofrer tanto nas mudanças, tudo com muito equilíbrio e cuidado com o paciente."
+  },
+  {
+    id: 10,
+    name: "LG",
+    initial: "L",
+    date: "25 de maio de 2026",
+    tag: "Consulta Acolhedora",
+    location: "Vinhedo",
+    rating: 5,
+    verified: true,
+    quote: "Consulta humanizada, acolhedora e atenta em sanar minhas necessidades."
+  }
+];
+
+function DoctoraliaTestimonialsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-play slider (troca automática a cada 4s)
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % doctoraliaReviews.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? doctoraliaReviews.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % doctoraliaReviews.length);
+  };
+
+  const visibleReviews = [
+    doctoraliaReviews[currentIndex % doctoraliaReviews.length],
+    doctoraliaReviews[(currentIndex + 1) % doctoraliaReviews.length],
+    doctoraliaReviews[(currentIndex + 2) % doctoraliaReviews.length],
+  ];
+
+  return (
+    <section className="py-20 lg:py-[100px] px-6 md:px-10 bg-primary text-white relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-[1200px] mx-auto relative z-10">
+        
+        {/* Section Header */}
+        <div className="text-center reveal max-w-3xl mx-auto mb-12">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white font-semibold text-[13px] uppercase tracking-wider mb-4 backdrop-blur-md border border-white/15">
+            <ShieldCheck size={16} className="text-accent" />
+            Depoimentos Reais & Verificados
+          </span>
+          <h2 className="text-[36px] md:text-[44px] text-white tracking-tight mb-4 leading-tight">
+            O que dizem os <em>pacientes</em>
+          </h2>
+          <p className="text-[16px] md:text-[18px] text-white/80 leading-relaxed">
+            Avaliações autênticas coletadas diretamente do perfil oficial no Doctoralia.
+          </p>
+        </div>
+
+        {/* Doctoralia Official Rating Card Banner */}
+        <div className="reveal mb-14 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/15 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left w-full sm:w-auto">
+            <img 
+              src="/Doctoralia.svg" 
+              alt="Doctoralia Logo" 
+              className="h-10 sm:h-12 md:h-14 object-contain brightness-0 invert" 
+            />
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1 flex-wrap">
+                <span className="text-3xl sm:text-3xl font-bold text-white leading-none">5.0</span>
+                <div className="flex text-ui-starGold">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={20} fill="currentColor" />
+                  ))}
+                </div>
+                <span className="text-base sm:text-sm text-white/90 font-semibold">(52+ opiniões)</span>
+              </div>
+              <p className="text-[15px] sm:text-sm text-white/90 text-center sm:text-left mt-1.5 leading-relaxed font-medium text-balance max-w-[320px] sm:max-w-none mx-auto sm:mx-0">
+                Perfil 100% verificado com pontuação máxima no Doctoralia Brasil
+              </p>
+            </div>
+          </div>
+
+          <a 
+            href="https://www.doctoralia.com.br/vania-mello/nutricionista/vinhedo" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-primary font-bold text-base sm:text-sm hover:bg-opacity-90 transition duration-300 shadow-md shrink-0 group"
+          >
+            Ver Perfil Oficial
+            <ExternalLink size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
+        </div>
+
+        {/* Interactive Carousel */}
+        <div 
+          className="relative reveal"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Grid of Cards (1 no mobile, 2 no tablet, 3 no desktop) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            {visibleReviews.map((item, idx) => (
+              <div 
+                key={`${currentIndex}-${item.id}-${idx}`} 
+                className={`bg-white text-text-body p-7 rounded-2xl shadow-xl flex-col justify-between h-full border border-white/20 transform transition-all duration-300 hover:-translate-y-1.5 animate-card-fade ${
+                  idx === 1 ? 'hidden md:flex' : idx === 2 ? 'hidden lg:flex' : 'flex'
+                }`}
+              >
+                <div className="flex-1 flex flex-col justify-between">
+                  {/* Top Badge & Rating */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex text-ui-starGold">
+                      {[...Array(item.rating)].map((_, i) => (
+                        <Star key={i} size={18} fill="currentColor" />
+                      ))}
+                    </div>
+                    {item.verified && (
+                      <span className="inline-flex items-center gap-1 text-[12px] sm:text-[11px] font-semibold bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200">
+                        <CheckCircle size={13} className="text-emerald-600" />
+                        Consulta Verificada
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Quote Container (Alinhamento & Altura Igual) */}
+                  <div className="relative my-4 flex-1 flex items-center min-h-[120px] sm:min-h-[130px] md:min-h-[145px]">
+                    <Quote size={24} className="text-primary/15 absolute -top-1 -left-2 rotate-180 shrink-0" />
+                    <p className="italic text-[16px] sm:text-[15px] leading-relaxed text-text-heading relative z-10 pl-3">
+                      "{item.quote}"
+                    </p>
+                  </div>
+                </div>
+
+                {/* Patient Footer */}
+                <div className="border-t border-gray-100 pt-4 flex items-center gap-3 mt-auto">
+                  <div className="w-11 h-11 sm:w-10 sm:h-10 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center text-base sm:text-sm shrink-0 border border-primary/20">
+                    {item.initial}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-bold text-base sm:text-sm text-text-heading truncate">{item.name}</h4>
+                    <p className="text-xs text-text-muted truncate">{item.date} • {item.tag}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Controls & Dots */}
+          <div className="flex items-center justify-between mt-10">
+            {/* Prev/Next Buttons */}
+            <div className="flex items-center gap-3">
+              <button 
+                onClick={handlePrev}
+                className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors border border-white/15 backdrop-blur-sm"
+                aria-label="Depoimento Anterior"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button 
+                onClick={handleNext}
+                className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors border border-white/15 backdrop-blur-sm"
+                aria-label="Próximo Depoimento"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+
+            {/* Pagination Indicators */}
+            <div className="flex items-center gap-2">
+              {doctoraliaReviews.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentIndex(i)}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    i === currentIndex ? 'w-8 bg-white' : 'w-2.5 bg-white/30 hover:bg-white/50'
+                  }`}
+                  aria-label={`Ir para depoimento ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="mt-16 text-center reveal">
+          <a 
+            href="https://tintim.link/whatsapp/04fd1ab5-eb65-4bbf-86a4-32adb78f3275/a24517b4-6edd-42c3-91f8-4435fd61a4c7" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            role="button" 
+            className="inline-flex items-center justify-center bg-white text-primary font-body font-semibold text-[16px] py-[16px] px-[36px] rounded-pill shadow-btn hover:shadow-lg transform hover:scale-[1.02] transition duration-300 group"
+          >
+            Quero Agendar Minha Consulta
+            <span className="w-[36px] h-[36px] bg-primary rounded-full flex items-center justify-center ml-4 text-white transform group-hover:translate-x-1 transition duration-300">
+              <ArrowRight size={18} />
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
   );
 }
