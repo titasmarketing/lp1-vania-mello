@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Clock, Heart, Leaf, Flower2, Venus, Calendar, ChevronLeft, ChevronRight, ExternalLink, ShieldCheck, Quote } from 'lucide-react';
+import { ArrowRight, ChevronDown, CheckCircle, Activity, ClipboardList, Target, UserCheck, Stethoscope, Droplet, Star, MapPin, Globe, Clock, Heart, Leaf, Flower2, Venus, Calendar, ChevronLeft, ChevronRight, ExternalLink, ShieldCheck, Quote } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,29 +58,29 @@ export default function App() {
       <div className="noise-overlay"></div>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] bg-secondary flex items-center pt-12 pb-12 overflow-hidden">
+      <section className="relative w-full min-h-[85vh] lg:min-h-[88vh] bg-secondary flex items-center pt-4 sm:pt-6 md:pt-8 pb-8 md:pb-12 overflow-hidden">
         {/* Decorative Background Letter */}
-        <div className="absolute top-10 right-10 md:top-[-5%] md:right-[-5%] text-decorative opacity-20 font-heading italic text-[40rem] leading-none pointer-events-none select-none z-0">
+        <div className="absolute top-6 right-6 md:top-[-5%] md:right-[-5%] text-decorative opacity-20 font-heading italic text-[40rem] leading-none pointer-events-none select-none z-0">
           V
         </div>
         
-        <div className="w-full max-w-[1200px] mx-auto px-6 md:px-10 z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="w-full max-w-[1200px] mx-auto px-6 md:px-10 z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           
           <div className="flex-1 reveal max-w-2xl text-center md:text-left flex flex-col items-center md:items-start">
             <img 
               src="/Fotos Vânia/Logo Vânia.png" 
               alt="Logo Vânia Mello" 
-              className="h-[64px] md:h-[100px] object-contain mb-4 md:mb-8 mix-blend-multiply opacity-90" 
+              className="h-[56px] md:h-[84px] object-contain mb-3 md:mb-5 mix-blend-multiply opacity-90" 
             />
-            <div className="inline-block px-3.5 py-1.5 mb-4 md:mb-6 rounded-[20px] border border-primary/20 text-[13px] md:text-sm font-semibold text-primary/80 max-w-[320px] md:max-w-[400px] leading-snug">
-              Nutricionista Clínica • Especialista em Doenças Crônicas • Vinhedo e Região
+            <div className="inline-block px-3.5 py-1.5 mb-3 md:mb-5 rounded-[20px] border border-primary/20 text-[13px] md:text-sm font-semibold text-primary/80 max-w-[340px] md:max-w-[420px] leading-snug">
+              Nutricionista Clínica • Especialista em Doenças Crônicas
             </div>
             
-            <h1 className="text-[34px] md:text-[52px] leading-[1.15] tracking-tight text-text-heading mb-4 md:mb-6">
+            <h1 className="text-[32px] sm:text-[36px] md:text-[50px] leading-[1.15] tracking-tight text-text-heading mb-3 md:mb-5">
               Transforme Seus Exames e Sua <em>Relação com a Comida</em>
             </h1>
             
-            <p className="text-[15px] md:text-lg text-text-muted mb-6 md:mb-10 max-w-[500px]">
+            <p className="text-[15px] md:text-lg text-text-muted mb-5 md:mb-8 max-w-[500px]">
               Nutrição clínica especializada em Doenças Crônicas para quem precisa controlar diabetes, pressão alta, colesterol e peso.
             </p>
             
@@ -90,25 +90,38 @@ export default function App() {
                 <ArrowRight size={18} />
               </span>
             </a>
-            <p className="mt-3 md:mt-4 text-[13px] md:text-sm text-text-muted">Atendimento em Vinhedo e Região</p>
+
+            {/* Badges de Atendimento Presencial & Online */}
+            <div className="mt-4 md:mt-5 flex flex-wrap items-center justify-center md:justify-start gap-2.5 sm:gap-3">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 border border-primary/15 shadow-xs text-xs sm:text-[13px] font-medium text-text-heading/90 backdrop-blur-xs">
+                <MapPin size={14} className="text-primary shrink-0" />
+                <span>Presencial em <strong>Vinhedo e Região</strong></span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 border border-primary/15 shadow-xs text-xs sm:text-[13px] font-medium text-text-heading/90 backdrop-blur-xs">
+                <Globe size={14} className="text-primary shrink-0" />
+                <span>Online para todo o <strong>Brasil e Exterior</strong></span>
+              </div>
+            </div>
           </div>
 
           <div className="flex-1 relative w-full lg:max-w-none max-w-md reveal">
-            <img 
-              src="/Fotos Vânia/IMG_9692.jpg" 
-              alt="Dra. Vânia Mello" 
-              className="w-full h-auto rounded-3xl object-cover shadow-img aspect-[4/5] object-top"
-            />
+            <div className="w-full rounded-3xl overflow-hidden shadow-img aspect-[4/5] bg-secondary/60">
+              <img 
+                src="/Fotos Vânia/IMG_9692.jpg" 
+                alt="Dra. Vânia Mello" 
+                className="w-full h-full object-cover object-[center_32%] scale-[1.12] transition-transform duration-500"
+              />
+            </div>
             {/* Social Proof Badge */}
-            <div className="absolute -bottom-6 -left-2 md:-left-16 bg-white p-4 md:p-5 rounded-2xl shadow-card flex items-center gap-5">
-              <img src="/Doctoralia.svg" alt="Doctoralia" className="w-[60px] h-[60px] md:w-[72px] md:h-[72px] object-contain shrink-0" />
+            <div className="absolute -bottom-5 -left-2 md:-left-12 bg-white p-3.5 md:p-5 rounded-2xl shadow-card flex items-center gap-4 md:gap-5 z-20">
+              <img src="/Doctoralia.svg" alt="Doctoralia" className="w-[52px] h-[52px] md:w-[68px] md:h-[68px] object-contain shrink-0" />
               <div className="flex flex-col min-w-max">
                 <div className="flex text-ui-starGold mb-1">
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
-                  <Star size={16} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
+                  <Star size={15} fill="currentColor" />
                 </div>
                 <span className="text-sm font-bold text-text-heading">5.0 / 5.0</span>
                 <span className="text-[12px] text-text-muted">49 opiniões</span>
@@ -304,10 +317,22 @@ export default function App() {
                     <MapPin size={24} />
                   </div>
                   <div className="flex flex-col">
-                    <h4 className="font-semibold text-xl mb-1 text-text-heading">Íntegra Clinic</h4>
+                    <h4 className="font-semibold text-xl mb-1 text-text-heading">Íntegra Clinic (Presencial)</h4>
                     <p className="text-text-muted text-[16px] leading-relaxed">
                       Rua Odair Rotella, 110, Centro<br/>
                       Vinhedo/SP - 13280-000
+                    </p>
+                  </div>
+               </div>
+
+               <div className="flex items-start gap-5">
+                  <div className="mt-1 flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                    <Globe size={24} />
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="font-semibold text-lg mb-1 text-text-heading">Atendimento Online</h4>
+                    <p className="text-text-muted text-[16px] leading-relaxed">
+                      Consultas por videoconferência para todo o Brasil e exterior com a mesma profundidade e acompanhamento.
                     </p>
                   </div>
                </div>
@@ -342,7 +367,7 @@ export default function App() {
           </div>
           <div className="flex-1 w-full reveal h-[400px] lg:h-[500px]">
             <iframe 
-              src="https://maps.google.com/maps?width=100%25&height=600&hl=pt-BR&q=Rua%20Odair%20Rotella%20110,%20Centro,%20Vinhedo+(%C3%8Dntegra%20Clinic)&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+              src="https://maps.google.com/maps?width=100%25&height=600&hl=pt-BR&q=Rua%20Odair%20Rotella%20110,%20Centro,%20Vinhedo+(%C3%8Dntegra%20Clinic)&t=&z=16&ie=UTF8&iwloc=B&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0, borderRadius: '24px' }} 
@@ -368,6 +393,7 @@ export default function App() {
           <div className="flex-[1.2] reveal w-full">
             <h2 className="text-[36px] md:text-[40px] mb-8">Dúvidas <em>Frequentes</em></h2>
             <div className="space-y-4">
+              <AccordionItem title="Como funciona a consulta online?" content="A consulta online é realizada por videoconferência com o mesmo tempo de atenção, acolhimento, análise criteriosa de seus exames e elaboração do plano alimentar personalizado da consulta presencial. Você também conta com acompanhamento e suporte contínuo pelo WhatsApp para tirar dúvidas." />
               <AccordionItem title="Você aceita convênio médico?" content="Atendimentos apenas ao Sulamérica Saúde. Os atendimentos são particulares, mas emito recibo para solicitação de reembolso junto ao seu convênio, de acordo com o seu plano." />
               <AccordionItem title="Quanto tempo demora para o plano alimentar ficar pronto?" content="Seu plano alimentar é entregue de forma ágil, focado nas suas necessidades reais e na sua rotina atual." />
               <AccordionItem title="Preciso levar exames na primeira consulta?" content="Se você tiver exames recentes, é ótimo trazer! Mas se não tiver, nós avaliamos a necessidade de solicitações durante a consulta." />
